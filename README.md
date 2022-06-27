@@ -14,6 +14,9 @@ The notebook called pipeline has the code for editing any ADF pipeline using the
 |azure-mgmt| 4.0|
 |azure-identity|1.10|
 
+#### Notebooks
+The `pipeline.ipynb` is used for editing Azure Data Factory pipelines on the collaboration branch. If for any reason you need to edit alternate branches of your ADF pipelines please use the notebooks in the next process **Azure DevOps SDK**
+
 ## Azure DevOps SDK
 
 The Azure DevOps SDK allows a person to connect to Azure DevOps and traverse a Git tree to edit any blob in any branch. The editgit notebook has code for updating blobs in a Git repository.
@@ -38,4 +41,4 @@ You will need the following python packages installed in your environment.
 You can find the above instructions at the following [Microsoft Document location](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
 
 #### Notebook
-You will start by using the editgit.ipynb. There are a few variables that you will need to adjust to control how the data will look for a branch and the properites it will update. The current example in the notebook edits the "copy" activity of an Azure Data Factory (ADF) pipeline. You can modify the activity and policies to update other pipelines.
+You will start by using the `editgit.ipynb`. There are a few variables that you will need to adjust to control how the data will look for a branch and the properites it will update. The current example in the notebook edits the "copy" activity of an Azure Data Factory (ADF) pipeline. You can modify the activity and policies to update other pipelines.
