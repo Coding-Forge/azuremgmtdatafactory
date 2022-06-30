@@ -28,6 +28,22 @@ You will need the following python packages installed in your environment.
 |---|---|
 |azure-devops| 6.0|
 |azure-identity|1.10|
+|azure-cli|2.0|
+
+#### Installing the Azure-CLI
+
+<ul>
+<li>Install on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows">Windows</a></li>
+<li>Install on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-macos">Mac OS</a></li>
+<li>Install on Linux or Windows Subsystem for Linux (WSL)</li>
+<ul>
+<li>Install on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt">Ubuntu or Debian</a></li>
+<li>Install with DNF on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=dnf">RHEL, Fedora, CentOS</a></li>
+<li>Install with zypper on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=zypper">OpenSuse, SLE</a></li>
+</ul>
+<li>Run in <a href="https://docs.microsoft.com/en-us/cli/azure/run-azure-cli-docker">docker container</a></li>
+<li>Run in <a href="https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart">Azure Cloud Shell</a></li>
+</ul>
 
 #### Creating a Personal Access Token (PAT)
 
