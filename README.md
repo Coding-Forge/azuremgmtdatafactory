@@ -28,9 +28,11 @@ You will need the following python packages installed in your environment.
 |---|---|
 |azure-devops| 6.0|
 |azure-identity|1.10|
-|azure-cli|2.0|
+|azure-cli|2.0.81|
+|azure devops extension for azure-cli||
 
 #### Installing the Azure-CLI
+The python sdk leverages the Azure-CLI to interact with the Azure DevOps APIs. The packages are thin wrappers around the APIs. If you need to install the Azure-CLI please find the corresponding link to your OS and follow the instructions for installation.
 
 <ul>
 <li>Install on <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows">Windows</a></li>
@@ -45,6 +47,13 @@ You will need the following python packages installed in your environment.
 <li>Run in <a href="https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart">Azure Cloud Shell</a></li>
 </ul>
 
+#### Adding the Azure DevOps extension
+On the command line you can type the following commands to add the extension
+```
+az extension add --name azure-devops
+
+```
+
 #### Creating a Personal Access Token (PAT)
 
 1. Sign into your organization (https://dev.azure.com/{yourorganization})
@@ -55,6 +64,10 @@ You will need the following python packages installed in your environment.
 6. When your done, make sure to copyt the token and store it in a secure location. For your security, it won't be shown again after you close the dialog box.
 
 You can find the above instructions at the following [Microsoft Document location](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
+
+#### Authorizing your PAT with Azure DevOps
+
+You can do a one time authorization of your PAT with Azure DevOps using the following commonad
 
 #### Notebook
 You will start by using the `editgit.ipynb`. There are a few variables that you will need to adjust to control how the data will look for a branch and the properites it will update. The current example in the notebook edits the "copy" activity of an Azure Data Factory (ADF) pipeline. You can modify the activity and policies to update other pipelines.
