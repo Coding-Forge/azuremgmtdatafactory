@@ -2,11 +2,14 @@ import json
 
 class Change:
     __body = dict()
+    __list_of_changes = []
    
     def __init__(self, branch_name, commit_id, comment):
         self.branch_name = branch_name
         self.commit_id = commit_id
         self.comment = comment
+        self.__list_of_changes=[]
+        self.__body=dict()
 
     def add_content(self, path, content):
         '''
@@ -28,8 +31,6 @@ class Change:
         '''
         return a list of dictionaries
         '''
-        list_of_changes = []
-
         content = self.__body
         for k,v in content.items():
             my_changes =  {
@@ -42,10 +43,12 @@ class Change:
                 "contentType": "rawtext"
             }}
 
-            list_of_changes.append(my_changes)
+            self.__list_of_changes.append(my_changes)
 
-        return list_of_changes
+        return self.__list_of_changes
 
+    # make a list of dictionary values to be converted to JSON
+    # then join them together in a string
     def git_push(self):
         changed_items = ["".join(json.dumps(item)) for item in self.__commits()]
         changed_items = ",".join(changed_items)
