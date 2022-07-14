@@ -35,7 +35,7 @@ class Change:
             my_changes =  {
             "changeType": "edit",
             "item": {
-                "path": f"/{k}"
+                "path": f"{k}"
             },
             "newContent": {
                 "content": f"{v}",
@@ -48,7 +48,8 @@ class Change:
 
     def git_push(self):
         changed_items = ["".join(json.dumps(item)) for item in self.__commits()]
-        return json.dumps(self.__refupdates())[0:-1] + ", \"commits\": [{\"comment\": \"" + self.comment + "\",\"changes\": [".join(changed_items) + "]}]}"
+        changed_items = ",".join(changed_items)
+        return json.dumps(self.__refupdates())[0:-1] + ", \"commits\": [{\"comment\": \"" + self.comment + "\",\"changes\": [" + changed_items + "]}]}"
 
         
 
